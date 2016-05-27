@@ -38,8 +38,7 @@ ol {
   text-align: center; }
 
 #header {
-  border-bottom: 1px solid;
-  margin-bottom: 5.0rem; }
+  border-bottom: 1px solid; }
   #header #logo {
     float: left;
     padding: 0;
