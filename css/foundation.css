@@ -600,12 +600,11 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
+ code,
+ kbd,
+ pre,
+ samp {
+   font-family: "Inconsolata", monospace; }
 
 /* Forms
    ========================================================================== */
@@ -1855,12 +1854,8 @@ abbr {
   border-bottom: 1px dotted #1F1D0F; }
 
 code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: normal;
-  color: #1F1D0F;
-  background-color: transparent;
-  border: none;
-  padding: 0; }
+  background: #f6f6f6;
+  color: #9c1d3d; }
 
 kbd {
   padding: 0.125rem 0.25rem 0;
