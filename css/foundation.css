@@ -1686,12 +1686,6 @@ dd,
 ul,
 ol,
 li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 pre,
 form,
 p,
@@ -1721,65 +1715,78 @@ small {
   font-size: 80%;
   line-height: inherit; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: inherit;
-  text-rendering: optimizeLegibility;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.4; }
-  h1 small,
-  h2 small,
-  h3 small,
-  h4 small,
-  h5 small,
-  h6 small {
-    color: #cacaca;
-    line-height: 0; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0px; }
 
-h1 {
-  font-size: 1.5rem; }
-
-h2 {
-  font-size: 1.25rem; }
-
-h3 {
-  font-size: 1.1875rem; }
-
-h4 {
-  font-size: 1.125rem; }
-
-h5 {
-  font-size: 1.0625rem; }
-
-h6 {
-  font-size: 1rem; }
-
-@media screen and (min-width: 40em) {
   h1 {
-    font-size: 3rem; }
+    font-size: 3.2rem; }
+    @media only all and (max-width: 47.938em) {
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem; } }
+
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    h2 {
+      font-size: 2.1rem; } }
+  @media only all and (max-width: 47.938em) {
+    h2 {
+      font-size: 2rem; } }
+
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    h3 {
+      font-size: 1.7rem; } }
+  @media only all and (max-width: 47.938em) {
+    h3 {
+      font-size: 1.6rem; } }
+
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    h4 {
+      font-size: 1.35rem; } }
+  @media only all and (max-width: 47.938em) {
+    h4 {
+      font-size: 1.25rem; } }
+
+  h1 {
+    text-align: center;
+    letter-spacing: -3px; }
 
   h2 {
-    font-size: 2.5rem; }
+    letter-spacing: -2px; }
 
   h3 {
-    font-size: 1.9375rem; }
+    letter-spacing: -1px; }
 
-  h4 {
-    font-size: 1.5625rem; }
+  h1 + h2 {
+    margin: -2rem 0 2rem 0;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    font-family: "Raleway", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300; }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      h1 + h2 {
+        font-size: 1.6rem; } }
+    @media only all and (max-width: 47.938em) {
+      h1 + h2 {
+        font-size: 1.5rem; } }
 
-  h5 {
-    font-size: 1.25rem; }
-
-  h6 {
-    font-size: 1rem; } }
+  h2 + h3 {
+    margin: 0.5rem 0 2rem 0;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    font-family: "Raleway", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300; }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      h2 + h3 {
+        font-size: 1.6rem; } }
+    @media only all and (max-width: 47.938em) {
+      h2 + h3 {
+        font-size: 1.5rem; } }
 a {
   color: #1E8CC7;
   text-decoration: none;
