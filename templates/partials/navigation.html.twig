@@ -15,7 +15,7 @@
     {% endfor %}
 {% endmacro %}
 
-<nav id="navbar">
+<nav id="sg-mainmenu">
   <ul class="{% if theme_config.dropdown.enabled %}dropdown {% endif %}menu"{% if theme_config.dropdown.enabled %} data-dropdown-menu{% endif %}>
     {% if theme_config.dropdown.enabled %}
       {{ _self.loop(pages) }}
