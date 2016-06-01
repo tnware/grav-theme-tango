@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class BonesVanilla extends Theme
+class Tango extends Theme
 {
 
 }
