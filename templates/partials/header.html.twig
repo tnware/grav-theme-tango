@@ -2,29 +2,25 @@
   <div class="top-bar-title">
     <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon dark" type="button" data-toggle></button>
-  </span>
-  <strong><a href="#">Tango</a></strong>
-</div>
-
-<div id="responsive-menu">
-   <div class="top-bar-left">
-    <!-- Left Nav Section -->
-    <ul class="menu vertical">
+    </span>
+    <strong><a href="#">Tango</a></strong>
+  </div>
+  <div id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="menu vertical">
       {% for page in pages.children %}
       {% if page.visible %}
       {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
       <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
       {% endif %}
       {% endfor %}
-    </ul>
-  </div>
-</div>
-</div>
-<div class="top-bar-right">
+      </ul>
+    </div>
+    <div class="top-bar-right">
       <ul class="menu">
         <li><input type="search" placeholder="Search"></li>
         <li><button type="button" class="button">Search</button></li>
       </ul>
     </div>
-
+  </div>
 </div>
