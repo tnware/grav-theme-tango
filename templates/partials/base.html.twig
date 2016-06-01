@@ -21,11 +21,11 @@
     <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
 
     {% block stylesheets %}
-        {# Bootstrap core CSS #}
+        {# Foundation core CSS #}
         {% do assets.add('theme://app/bower_components/tango/css/foundation.min.css',101) %}
 
-    {# Custom styles for this theme #}
-        {% do assets.add('theme://css/tango-custom.css',100) %}
+    {# Custom styles foundation.css for this theme #}
+        {% do assets.add('theme://css/foundation.css',100) %}
 
         {{ assets.css() }}
     {% endblock %}
