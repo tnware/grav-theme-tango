@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Foundation</title>
+    <title>Tango</title>
 
     {% block head %}
     <meta charset="utf-8">
@@ -22,17 +22,17 @@
 
     {% block stylesheets %}
         {# Bootstrap core CSS #}
-        {% do assets.add('theme://app/bower_components/foundation/css/foundation.min.css',101) %}
+        {% do assets.add('theme://app/bower_components/tango/css/foundation.min.css',101) %}
 
     {# Custom styles for this theme #}
-        {% do assets.add('theme://css/foundation-custom.css',100) %}
+        {% do assets.add('theme://css/tango-custom.css',100) %}
 
         {{ assets.css() }}
     {% endblock %}
 
     {% block javascripts %}
         {% do assets.add('theme://app/bower_components/jquery/dist/jquery.min.js', 101) %}
-        {% do assets.add('theme://app/bower_components/foundation/js/foundation.min.js') %}
+        {% do assets.add('theme://app/bower_components/tango/js/foundation.min.js') %}
 
 
         {{ assets.js() }}
