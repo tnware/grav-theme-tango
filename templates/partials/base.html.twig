@@ -21,18 +21,18 @@
     <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
 
     {% block stylesheets %}
-        {# Bootstrap core CSS #}
-        {% do assets.add('theme://app/bower_components/tango/css/foundation.min.css',101) %}
+        {# Foundation core CSS #}
+        {% do assets.add('theme://css/foundation.min.css',101) %}
 
     {# Custom styles for this theme #}
-        {% do assets.add('theme://css/tango-custom.css',100) %}
+        {% do assets.add('theme://css/foundation.css',100) %}
 
         {{ assets.css() }}
     {% endblock %}
 
     {% block javascripts %}
-        {% do assets.add('theme://app/bower_components/jquery/dist/jquery.min.js', 101) %}
-        {% do assets.add('theme://app/bower_components/tango/js/foundation.min.js') %}
+        {% do assets.add('theme://js/vendor/jquery.js', 101) %}
+        {% do assets.add('theme://js/vendor/foundation.min.js') %}
 
 
         {{ assets.js() }}
