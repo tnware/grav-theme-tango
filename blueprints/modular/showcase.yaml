@@ -19,19 +19,27 @@ form:
                 header.template:
                   default: modular/showcase
                   @data-options: '\Grav\Common\Page\Pages::modularTypes'
-
-        styles:
+        buttons:
           type: tab
-          title: Row Style
+          title: Buttons
           fields:
-            header.styles:
-              type: textarea
-              label: Row Styles
-              size: medium
-            header.content_styles:
-              type: textarea
-              label: Content Block Styles
-              size: medium
-
-        assets:
-          type: ignore
+            header.buttons:
+              name: buttons
+              type: list
+              label: Buttons
+              fields:
+                .text:
+                  type: text
+                  label: Text
+                .url:
+                  type: text
+                  label: URL
+                .primary:
+                  type: toggle
+                  label: Primary
+                  highlight: 1
+                  options:
+                      1: Yes
+                      0: No
+                  validate:
+                      type: bool

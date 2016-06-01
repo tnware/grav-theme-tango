@@ -1,47 +1,54 @@
 {% embed 'partials/base.html.twig' %}
 
 	{% set collection = page.collection() %}
+	{% set base_url = page.url %}
+    {% set feed_url = base_url %}
+
+    {% if base_url == '/' %}
+        {% set base_url = '' %}
+    {% endif %}
+
+    {% if base_url == base_url_relative %}
+        {% set feed_url = base_url~'/'~page.slug %}
+    {% endif  %}
 
 	{% block content %}
-		{% set blog_image = page.media.images|first %}
+        <div class="header">
+            <div class="container">
+                {{ page.content }}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 blog-main">
 
-		{% if blog_image %}
-		<div class="blog-header-image" style="background-image: url({{ blog_image.url }});">
-			<div class="row sg-center sg-highlight-light">
-				<div class="sg-content">
-		{% else %}
-		<div class="blog-header">
-			<div class="row sg-center">
-				<div class="sg-content">
-		{% endif %}
-					{{ page.content }}
-				</div>
-			</div>
-		</div>
+                    {% if config.plugins.breadcrumbs.enabled %}
+                        {% include 'partials/breadcrumbs.html.twig' %}
+                    {% endif %}
 
-			{% if config.plugins.breadcrumbs.enabled %}
-				<div class="sg-breadcrumb">
-					<div class="row">
-						{% include 'partials/breadcrumbs.html.twig' %}
-					</div>
-				</div>
-			{% endif %}
-		<div class="sg-blog">
-			<div class="row">
-				<div id="listing" class="medium-8 columns medium-nopaddingleft">
-					{% for child in collection %}
-				        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
-				    {% endfor %}
+                    {% for child in collection %}
+                        {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+                    {% endfor %}
 
-	                {% if config.plugins.pagination.enabled and collection.params.pagination %}
-	                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-	                {% endif %}
-				</div>
-				<div id="sidebar" class="medium-4 columns medium-nopaddingright">
-					{% include 'partials/sidebar.html.twig' with {'blog':page} %}
-				</div>
-			</div>
-		</div>
+                </div>
+
+        		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+       				{% include 'partials/sidebar.html.twig' with {'blog':page} %}
+        		</div>
+            </div>
+        </div>
+	{% endblock %}
+
+	{% block pagination %}
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 text-center">
+                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+                </div>
+            </div>
+        </div>
+	    {% endif %}
 	{% endblock %}
 
 {% endembed %}

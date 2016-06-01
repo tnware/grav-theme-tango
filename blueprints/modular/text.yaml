@@ -19,24 +19,16 @@ form:
                 header.template:
                   default: modular/text
                   @data-options: '\Grav\Common\Page\Pages::modularTypes'
-        styles:
-          type: tab
-          title: Row Style
+        content:
           fields:
-            header.styles:
-              type: textarea
-              label: CSS Classes
-              size: medium
+            uploads:
+              label: Page Media (first one will be displayed next to your content)
             header.image_align:
               type: select
               label: Image position
-              size: small
               classes: fancy
-              default: right
+              default: left
               options:
-                'center': 'Center'
                 'left': 'Left'
                 'right': 'Right'
-
-        assets:
-          type: ignore
+              type:
