@@ -25,15 +25,16 @@
         {% do assets.add('theme://css/foundation.min.css',101) %}
 
     {# Custom styles for this theme #}
-        {% do assets.add('theme://css/foundation.css',100) %}
+        {% do assets.add('theme://css/tango-custom.css',100) %}
 
         {{ assets.css() }}
     {% endblock %}
 
     {% block javascripts %}
         {% do assets.add('theme://js/vendor/jquery.js', 101) %}
+        {% do assets.add('theme://js/vendor/foundation.js') %}
         {% do assets.add('theme://js/vendor/foundation.min.js') %}
-
+        {% do assets.add('theme://js/app.js') %}
 
         {{ assets.js() }}
     {% endblock %}
