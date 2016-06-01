@@ -1,34 +1,30 @@
-name: Tango
-version: 1.4.0
-description: "Tango is a free and responsive theme for **Grav**. It's a port of **Twenty** template by HTML5 UP with help from the Grav team."
-icon: group
+name: Bootstrap
+version: 1.4.1
+description: "Bootstrap is built using the popular **Bootstrap** Framework"
+icon: bold
 author:
-  name: Tyler Woods
-  email: tw@tnware.net
-  url: http://tnware.net
-homepage: https://github.com/tnware/grav-theme-tango
-keywords: tango, theme, onepage, modern, fast, responsive, html5, css3
-bugs: https://github.com/tnware/grav-theme-tango/issues
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-bootstrap
+demo: http://demo.getgrav.org/bootstrap-skeleton/
+keywords: bootstrap, theme, framework
+bugs: https://github.com/getgrav/grav-theme-bootstrap/issues
 license: MIT
 
+dependencies:
+  - bootstrapper
+
 form:
-  validation: loose
+  validation: strict
   fields:
     dropdown.enabled:
         type: toggle
         label: Dropdown in navbar
         highlight: 1
-        default: 0
+        default: 1
         options:
           1: Enabled
           0: Disabled
         validate:
           type: bool
-
-    color:
-        type: text
-        size: medium
-        label: Color
-        default: 'blue'
-        validate:
-          type: text
